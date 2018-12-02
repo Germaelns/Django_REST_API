@@ -55,17 +55,3 @@ def user_post(request):
             data = "Successful unlike adding"
 
         return Response(data, status=status.HTTP_201_CREATED)
-
-#
-# @api_view(['POST'])
-# @permission_classes([IsAuthenticated, ])
-# def like_post(request):
-#     post = Post.objects.get(title=request.data['title'])
-#
-#     if request.data['like'] == 'True':
-#         post.likes += 1
-#         post.save()
-#     else:
-#         post.unlikes += 1
-#         post.save()
-#     return Response(post.likes, status=status.HTTP_201_CREATED)
