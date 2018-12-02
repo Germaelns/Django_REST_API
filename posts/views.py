@@ -45,7 +45,7 @@ def user_post(request):
 
         post = Post.objects.get(title=request.data['title'])
 
-        if request.data['like'] == 'True':
+        if request.data['like'] == 'Like':
             post.likes += 1
             post.save()
             data = "Successful like adding"
