@@ -54,4 +54,4 @@ def user_post(request):
             post.save()
             data = "Successful unlike adding"
 
-        return Response(data, status=status.HTTP_201_CREATED)
+        return Response(data, status=status.HTTP_200_OK)
