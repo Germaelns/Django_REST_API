@@ -77,6 +77,8 @@ headers {
 
 <h2>Find post by title</h2>
 
+Request type: GET
+
 http://127.0.0.1:8000/posts/?title=post
 
 headers {
