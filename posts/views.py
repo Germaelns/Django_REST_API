@@ -22,7 +22,7 @@ class PostApiView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except:
             data = "Please post correct data"
-            return Response(data, status=status.HTTP_409_CONFLICT)
+            return Response(data, status=status.HTTP_400_BAD_REQUEST)
 
     def get(self, request):
         try:
