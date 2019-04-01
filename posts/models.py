@@ -10,7 +10,6 @@ class Post(models.Model):
     author = models.CharField(max_length=40, verbose_name="Author", default="Ghost")
     date = models.DateTimeField(auto_now_add=True)
     likes = models.IntegerField(default=0)
-    unlikes = models.IntegerField(default=0)
 
     def __str__(self):
         return self.title
