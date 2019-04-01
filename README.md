@@ -7,6 +7,8 @@ REST API, PostgreSQL
 
 <h2>Create user:</h2>
 
+Request type: POST
+
 http://127.0.0.1:8000/users/
 
 body {
@@ -23,6 +25,8 @@ headers {
 
 <h2>Get token:</h2>
 
+Request type: POST
+
 http://127.0.0.1:8000/api-token-auth/
 
 body {
@@ -36,6 +40,8 @@ headers {
 
 
 <h2>Add post:</h2>
+
+Request type: POST
 
 http://127.0.0.1:8000/posts/
 
@@ -54,11 +60,13 @@ headers {
 
 <h2>Add like/unlike:</h2>
 
+Request type: PUT
+
 http://127.0.0.1:8000/posts/
 
 body {
         "title": "title",
-	      "like": "True or False"
+	"like": "Like or Unlike"
 }
 
 headers {
@@ -69,7 +77,9 @@ headers {
 
 <h2>Find post by title</h2>
 
-http://127.0.0.1:8000/posts/?title=my first post
+Request type: GET
+
+http://127.0.0.1:8000/posts/?title=post
 
 headers {
         "Content-Type": "application/json",
